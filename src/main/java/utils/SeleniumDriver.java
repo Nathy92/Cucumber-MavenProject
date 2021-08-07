@@ -18,6 +18,7 @@ public class SeleniumDriver {
 	public final static int PAGE_LOAD_TIMEOUT = 50;
 
 	private SeleniumDriver() {
+		//Change driver to chrome
 		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\src\\test\\resources\\executables\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();

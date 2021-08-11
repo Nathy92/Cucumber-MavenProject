@@ -15,8 +15,8 @@ Feature: Acceptance testing to validate Search cars page is working fine
     And Click on  "Search Cars link" link
     And select carbrand as "BMW" from AnyMake dropdown
     And select car model as "1 Series" from AnyModel dropdown
-    And select location as "SA - South" from AnyLocation dropdown
-    And select price as "$1,000" from Price dropdown
+    And select location as "SA - All" from AnyLocation dropdown
+    And select price as "$10,000" from Price dropdown
     And click on Find_My_Next_Car button
     Then I should see list of searched cars
-    And The page title should be "Bmw 1 Series Under 1000 for Sale SA | carsguide"
+    And The page title should be "Bmw 1 Series Under 10000 for Sale SA | carsguide"

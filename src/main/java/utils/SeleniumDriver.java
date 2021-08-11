@@ -12,14 +12,18 @@ public class SeleniumDriver {
 
 	// Init WebDriver
 	private static WebDriver driver;
-
+    private static String nathiPassword;
 	private static WebDriverWait waitDriver;
 	public final static int TIMEOUT = 30;
 	public final static int PAGE_LOAD_TIMEOUT = 50;
 
+	 public static void getNathiPass() {
+		 
+	 }
 	private SeleniumDriver() {
-		//Change driver to chrome
-		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\src\\test\\resources\\executables\\geckodriver.exe");
+
+		System.setProperty("webdriver.gecko.driver",
+				System.getProperty("user.dir") + "\\src\\test\\resources\\executables\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 

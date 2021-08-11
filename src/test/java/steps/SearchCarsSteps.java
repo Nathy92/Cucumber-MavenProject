@@ -2,6 +2,8 @@ package steps;
 
 import java.util.List;
 
+import org.testng.Assert;
+
 import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -57,11 +59,13 @@ public class SearchCarsSteps {
 
 	@Then("^I should see list of searched cars$")
 	public void i_should_see_list_of_searched_cars() throws Throwable {
-		
+		System.out.println("Car list found !!");
 	}
 
 	@And("^The page title should be \"([^\"]*)\"$")
-	public void the_page_title_should_be(String arg1) throws Throwable {
+	public void the_page_title_should_be(String expectedTitle) throws Throwable {
+		String actualTitle = SeleniumDriver.getDriver().getTitle();
+		Assert.assertEquals(actualTitle, expectedTitle);
 		
 	}
 
